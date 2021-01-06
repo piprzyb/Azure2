@@ -32,8 +32,11 @@ In this step best model was deployed. Deployment allows to interact with the HTT
 ![alt text](pics/deploy.png)
 ### Step 4: Enable logging
 After the deployment, Application Insights service was enabled and logs retrived. At first config.json was downloaded from the Azure Workspace. Then logs.py script was updated with the details of the deployement, and attribute enable_app_insights was set to True. After those steps python script was run:
+
 ![alt text](pics/logs_py.png)
+
 Applications Insights enabled:
+
 ![alt text](pics/app_ins.png)
 ### Step 5: Swagger Documentation
 In this step, deployed model was consumed using Swagger. Azure provides a Swagger JSON file for deployed models. Swagger is then run locally using swagger.sh and serve.py script is executed to interact with Swagger instance and send request using HTTP POST method. 
