@@ -31,7 +31,7 @@ Best model was VotingEnsemble classifier with accuracy of 92%.
 In this step best model was deployed. Deployment allows to interact with the HTTP API service and interact with the model by sending data over POST requests.
 ![alt text](pics/deploy.png)
 ### Step 4: Enable logging
-After the deploymen, Application Insights service was enabled and logs retrived. At first config.json was downloaded from the Azure Workspace. Then logs.py script was updated with the details of the deployement, and attribute enable_app_insights was set to True. After those steps python script was run:
+After the deployment, Application Insights service was enabled and logs retrived. At first config.json was downloaded from the Azure Workspace. Then logs.py script was updated with the details of the deployement, and attribute enable_app_insights was set to True. After those steps python script was run:
 ![alt text](pics/logs_py.png)
 Applications Insights enabled:
 ![alt text](pics/app_ins.png)
@@ -53,19 +53,18 @@ Pipeline endpoint:
 ![alt text](pics/pipeline_endpoint.png)
 
 Bankmarketing with AutoML module:
-![alt text](bankmkt_automl.png)
+![alt text](pics/bankmkt_automl.png)
 
 Published pipeline overview:
-![alt text](overview_active.png)
+![alt text](pics/overview_active.png)
 
 RunDetail widget:
-![alt text](widget.png)
+![alt text](pics/widget.png)
 
 Scheduled run:
-![alt text](sched_run.png)
+![alt text](pics/sched_run.png)
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+https://www.youtube.com/watch?v=onmwoeLrca0
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+
