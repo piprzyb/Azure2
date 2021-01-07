@@ -27,11 +27,11 @@ At first, dataset used in this project was uploaded to Azure workspace. Dataset 
 
 After dataset registration, AutoML experiment was created with task type - Classification. 
 
-![alt text](pics/best_model1.png)
+![alt text](pics/best_model_1.png)
 
 Best model was VotingEnsemble classifier with accuracy of 92%.
 
-![alt text](pics/best_model2.png)
+![alt text](pics/best_model_2.png)
 
 ### Step 3: Deploy the best model
 In this step best model was deployed. Deployment allows to interact with the HTTP API service and interact with the model by sending data over POST requests.
