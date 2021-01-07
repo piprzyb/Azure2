@@ -22,32 +22,41 @@ Steps that are followed:
 In this step, service principal ml-auth was to be created, but since the project was executed in Udacity Azure Workspace, the authentication step was already part of the setup.
 ### Step 2: Automated ML Experiment
 At first, dataset used in this project was uploaded to Azure workspace. Dataset contains data about marketing campaigns in banking institution and objective was to predict if marketing campaign was successful, meaning if contacted customer subscribed to product ('yes') or not ('no').
+
 ![alt text](pics/data_upload.png)
+
 After dataset registration, AutoML experiment was created with task type - Classification. 
+
 ![alt text](pics/best_model1.png)
+
 Best model was VotingEnsemble classifier with accuracy of 92%.
+
 ![alt text](pics/best_model2.png)
+
 ### Step 3: Deploy the best model
 In this step best model was deployed. Deployment allows to interact with the HTTP API service and interact with the model by sending data over POST requests.
+
 ![alt text](pics/deploy.png)
+
 ### Step 4: Enable logging
 After the deployment, Application Insights service was enabled and logs retrived. At first config.json was downloaded from the Azure Workspace. Then logs.py script was updated with the details of the deployement, and attribute enable_app_insights was set to True. After those steps python script was run:
 
 ![alt text](pics/logs_py.png)
 
+Applications Isights is used to monitor live applications. It automatically detects performance anomalies, and includes analytics tools to help diagnose issues and to understand what is actually done. It will be used to interact with Swagger in next step.
 Applications Insights enabled:
 
 ![alt text](pics/app_ins.png)
 ### Step 5: Swagger Documentation
-In this step, deployed model was consumed using Swagger. Azure provides a Swagger JSON file for deployed models. Swagger is then run locally using swagger.sh and serve.py script is executed to interact with Swagger instance and send request using HTTP POST method. 
+In this step, deployed model was consumed using Swagger. Swagger lets to check if the endpoint can be consumed using HTTP methods. Azure provides a Swagger JSON file for deployed models. Swagger is then run locally using swagger.sh and serve.py script is executed to interact with Swagger instance and send request using HTTP POST method. 
 ![alt text](pics/sw.png)
 ### Step 6: Consume model endpoints
-After the deployment we can interact with trained model and send data for scoring. Using endpoint.py file sample features are sent via POST method and result is returned.
+After the deployment we can interact with trained model and send data for scoring. Using endpoint.py file sample features are sent via POST method and result is returned. That way it is known that enpoint works well.
 ![alt text](pics/resp.png)
 Also as optional step we can benchmark the endpoint using Apache Benchmark and runing benchmark script.
 ![alt text](pics/benchmark.png)
 ### Step 7: Create and publish a pipeline
-In this step Azure SDK is used to create, publish and consume a pipeline.
+In this step Azure SDK is used to create, publish and consume a pipeline. Pipelines are used to automate model building, deployment and publishing. By building pipline and running it with SDK all the steps done previously manually are done at once. 
 
 Pipeline created:
 ![alt text](pics/pipeline_created.png)
@@ -68,6 +77,7 @@ Scheduled run:
 ![alt text](pics/sched_run.png)
 
 ## Screen Recording
-https://www.youtube.com/watch?v=onmwoeLrca0
+https://youtu.be/NmFHsTX-tDw
 
-
+## Standout Suggestions
+For future work some custom model deployments can be automated using pipeline, for example piplines with hyperdrive step. 
